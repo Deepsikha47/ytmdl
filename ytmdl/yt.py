@@ -68,13 +68,14 @@ def search(querry, lim=5):
 
         url = vid['href']
 
-        try:
-            data = scan_video(url)
-        except Exception:
+        # try:
+        data = scan_video(url)
+        """except Exception:
             # If something was wrong, append the last result and return
             video.append(data)
             urls.append(url)
             break
+        """
 
         video.append(data)
         urls.append(url)
